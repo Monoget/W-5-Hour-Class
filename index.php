@@ -1,3 +1,6 @@
+<?php
+date_default_timezone_set("America/New_York");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -339,24 +342,114 @@
                 <div class="col-lg-12">
                     <div class="cd-pricing-container cd-has-margins">
                         <div class="row cd-pricing-list cd-bounce-invert">
-                            <div class="col-lg-6 mx-auto">
-                                <div class="single-pricing pricing-tow pricing-body text-center mt-30">
-                                    <div class="pricing-thumb">
-                                        <img src="assets/images/svg/priceing-1.svg" alt="pricing">
-                                    </div>
-                                    <div class="pricing-price mt-30">
-                                        <h2>$50</h2>
-                                        <p>5 Hour Class</p>
-                                    </div>
-                                    <div class="pricing-content mt-25">
-                                        <p class="mb-35">If you need same day services fee $125. And please come
-                                            before 12 PM</p>
-                                        <a class="main-btn main-btn-3" href="#appointment">Enroll Now</a>
-                                    </div>
-                                </div> <!-- single price -->
-                            </div>
+                            <?php
+                            for ($i = 0; $i < 8; $i++) {
+
+                                $date = date("d-m-Y");
+                                $date = strtotime($date);
+                                $date = strtotime("+" . $i . " day", $date);
+
+                                $day = date('M d, Y', $date);
+
+                                $day_name = date("l", $date);
+
+                                $hour = date("G");
+
+                                if ($day_name != 'Sunday') {
+                                    if ($hour > 9 && $i == 0) {
+
+                                    }
+                                    else {
+                                        ?>
+                                        <div class="col-lg-4 mx-auto">
+                                            <div class="single-pricing pricing-tow pricing-body text-center mt-30">
+                                                <div class="pricing-thumb">
+                                                    <img src="assets/images/svg/priceing-1.svg" alt="pricing">
+                                                </div>
+                                                <div class="pricing-price mt-30">
+                                                    <h2>$50</h2>
+                                                    <p>5 Hour Class</p>
+                                                    <p class="text-dark"><?php echo $day_name; ?></p>
+                                                </div>
+                                                <div class="pricing-content mt-25">
+                                                    <p class="mb-35">
+                                                        <?php echo $day; ?><br/>
+                                                        <span class="text-danger">09:30 am - 2:30 pm</span><br/>
+                                                        <span class="text-success">Online Course</span>
+                                                    </p>
+                                                    <a class="main-btn main-btn-3" href="Checkout?date=<?php echo $day; ?>&time=09:30 AM">SCHEDULE ONLINE</a>
+                                                </div>
+                                            </div> <!-- single price -->
+                                        </div>
+                                        <?php
+                                    }
+
+                                    if ($hour > 17 && $i == 0) {
+
+                                    }
+                                    else {
+                                        ?>
+
+                                        <div class="col-lg-4 mx-auto">
+                                            <div class="single-pricing pricing-tow pricing-body text-center mt-30">
+                                                <div class="pricing-thumb">
+                                                    <img src="assets/images/svg/priceing-1.svg" alt="pricing">
+                                                </div>
+                                                <div class="pricing-price mt-30">
+                                                    <h2>$50</h2>
+                                                    <p>5 Hour Class</p>
+                                                    <p class="text-dark"><?php echo $day_name; ?></p>
+                                                </div>
+                                                <div class="pricing-content mt-25">
+                                                    <p class="mb-35">
+                                                        <?php echo $day; ?><br/>
+                                                        <span class="text-danger">3:00 pm - 8:00 pm</span><br/>
+                                                        <span class="text-success">Online Course</span>
+                                                    </p>
+                                                    <a class="main-btn main-btn-3" href="Checkout?date=<?php echo $day; ?>&time=03:00 PM">SCHEDULE ONLINE</a>
+                                                </div>
+                                            </div> <!-- single price -->
+                                        </div>
+                                        <?php
+                                    }
+                                } else {
+                                    if ($hour > 10 && $i == 0) {
+
+                                    }
+                                    else {
+                                        ?>
+                                        <div class="col-lg-4 mx-auto">
+                                            <div class="single-pricing pricing-tow pricing-body text-center mt-30">
+                                                <div class="pricing-thumb">
+                                                    <img src="assets/images/svg/priceing-1.svg" alt="pricing">
+                                                </div>
+                                                <div class="pricing-price mt-30">
+                                                    <h2>$50</h2>
+                                                    <p>5 Hour Class</p>
+                                                    <p class="text-dark"><?php echo $day_name; ?></p>
+                                                </div>
+                                                <div class="pricing-content mt-25">
+                                                    <p class="mb-35">
+                                                        <?php echo $day; ?><br/>
+                                                        <span class="text-danger">11:00 am - 4:00 pm</span><br/>
+                                                        <span class="text-success">Online Course</span>
+                                                    </p>
+                                                    <a class="main-btn main-btn-3" href="Checkout?date=<?php echo $day; ?>&time=11:00 AM">SCHEDULE ONLINE</a>
+                                                </div>
+                                            </div> <!-- single price -->
+                                        </div>
+                                        <?php
+                                    }
+                                }
+                            }
+                            ?>
                         </div>
                     </div> <!-- cd-pricing-container -->
+                </div>
+                <div class="col-lg-12">
+                    <div class="text-center mt-5">
+                        <a class="main-btn main-btn-2" href="Other">Book Other Schedule</a>
+                    </div>
                 </div>
             </div> <!-- row -->
         </div> <!-- row -->

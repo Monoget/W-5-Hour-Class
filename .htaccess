@@ -1,5 +1,9 @@
 RewriteEngine on
 
-RewriteRule ^Home index.html [NC,L]
+RewriteRule ^Home index.php [NC,L]
+
+RewriteRule ^Other other.php [NC,L]
+
+RewriteRule ^Checkout checkout.php [NC,L]
 
 RewriteRule ^Appointment email.php [NC,L]
