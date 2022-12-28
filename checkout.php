@@ -180,8 +180,9 @@ date_default_timezone_set("America/New_York");
                     </div>
                     <div class="col-lg-6">
                         <div class="single-contact-form form-group">
-                            <input type="text" name="phone" placeholder="Phone Number"
-                                   data-error="Phone number is required." required="required">
+                            <input type="text" name="phone_number" placeholder="Phone Number"
+                                   data-error="Phone number is required." maxlength="10"
+                                   minlength="10" required="required">
                             <div class="help-block with-errors"></div>
                         </div> <!-- single contact form -->
                     </div>
@@ -205,6 +206,8 @@ date_default_timezone_set("America/New_York");
                                    data-error="Subject is required." required="required">
                             <div class="help-block with-errors"></div>
                         </div> <!-- single contact form -->
+                        <input type="hidden" class="form-control" name="state" value="NY" required>
+                        <input type="hidden" class="form-control" name="price" id="price" value="50" required>
                     </div>
                     <div class="col-lg-12">
                         <div class="single-contact-form form-group">
@@ -216,9 +219,8 @@ date_default_timezone_set("America/New_York");
                             </div>
                         </div>
                         <p class="mt-4">
-                            Demo attach files for references <a href="assets/images/attach-file/men.jpg"
-                                                                target="_blank">Male</a>,
-                            <a href="assets/images/attach-file/women.jpg" target="_blank">Female</a>
+                            Demo attach files for references <a href="assets/images/attach-file/women.jpg"
+                                                                target="_blank">click here</a>
                         </p>
                     </div>
                     <div class="col-lg-6">
@@ -240,12 +242,19 @@ date_default_timezone_set("America/New_York");
                         <div class="single-contact-form form-group">
                             <label>Do you want to pick up your certificate or have it mailed? <i
                                         class="text-danger">*</i></label>
-                            <select name="pickup" class="form-control card-class" required>
+                            <select name="pickup" class="form-control card-class"
+                                    onchange="pickupProcedure(this.value);" required>
                                 <option>Please Select</option>
                                 <option value="Buffalo">Pickup from Buffalo Branch</option>
                                 <option value="Woodside">Pickup from Woodside Branch</option>
                                 <option value="Mailed">Mailed</option>
                             </select>
+                        </div> <!-- single contact form -->
+                    </div>
+                    <div class="col-lg-12" id="mail_location" style="display: none">
+                        <div class="single-contact-form form-group">
+                            <label>Mail Location <i class="text-danger">*</i></label>
+                            <input type="text" name="location" id="location"/>
                         </div> <!-- single contact form -->
                     </div>
                     <div class="col-lg-12">
@@ -257,17 +266,20 @@ date_default_timezone_set("America/New_York");
                                     <td class="text-right"><strong>SUBTOTAL</strong></td>
                                 </tr>
                                 <tr>
-                                    <td>5 Hour Class × 1</td>
+                                    <td>5 Hour Class (MV-278) × 1</td>
                                     <td class="text-right">$ 50.00</td>
                                 </tr>
-
+                                <tr style="display: none;" id="mail">
+                                    <td>Mailed Cost × 1</td>
+                                    <td class="text-right">$ 3.75</td>
+                                </tr>
                                 <tr>
                                     <td>Subtotal</td>
-                                    <td class="text-right">$ 50.00</td>
+                                    <td class="text-right" id="subtotal">$ 50.00</td>
                                 </tr>
                                 <tr>
                                     <td>Total</td>
-                                    <td class="text-right">$ 50.00</td>
+                                    <td class="text-right" id="total">$ 50.00</td>
                                 </tr>
                             </table>
                         </div>
@@ -324,6 +336,19 @@ date_default_timezone_set("America/New_York");
                                     </div>
                                     <img src="assets/images/checkout/cash_app.png" height="30px"/>
                                     <label class="font-weight-bold ml-1">Cash-App</label>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-sm-6">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend mr-1">
+                                        <div class="input-group-text">
+                                            <input type="radio" name="checkout"
+                                                   aria-label="Radio button for following text input" value="venmo"
+                                                   onclick="checkoutFunction(this.value);">
+                                        </div>
+                                    </div>
+                                    <img src="assets/images/checkout/venmo.png" height="30px"/>
+                                    <label class="font-weight-bold ml-1">Venmo</label>
                                 </div>
                             </div>
                         </div>
@@ -526,16 +551,66 @@ date_default_timezone_set("America/New_York");
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="single-contact-form form-group">
-                                    <label>Payment Proof <i class="text-danger">*</i></label>
-                                    <div class="input-group">
-                                        <div class="custom-file">
-                                            <input type="file" class="custom-file-input cash-app-class"
-                                                   id="inputGroupFile04" name="payment_proof_cash_app"
-                                                   aria-describedby="inputGroupFileAddon04">
-                                            <label class="custom-file-label" for="inputGroupFile04">Choose file</label>
+                                        <label>Payment Proof <i class="text-danger">*</i></label>
+                                        <div class="input-group">
+                                            <div class="custom-file">
+                                                <input type="file" class="custom-file-input cash-app-class"
+                                                       id="inputGroupFile04" name="payment_proof_cash_app"
+                                                       aria-describedby="inputGroupFileAddon04">
+                                                <label class="custom-file-label" for="inputGroupFile04">Choose
+                                                    file</label>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
+                                <div class="col-lg-12">
+                                    <div class="form-check mt-3">
+                                        <input class="form-check-input paypal-class" type="checkbox" value=""
+                                               id="flexCheckChecked">
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            By Placing Order You accepting our <a href="Terms-and-Condition"
+                                                                                  class="text-primary" target="_blank">terms
+                                                & condition</a>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="single-contact-form text-center">
+                                        <button type="submit" class="main-btn main-btn-3" name="submit">Place Order
+                                        </button>
+                                    </div> <!-- single contact form -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contact-form" id="venmo" style="display: none;">
+                            <div class="row">
+                                <div class="col-lg-12 text-center mt-3">
+                                    <h3>Venmo</h3>
+                                    <p>Please pay in this number <span class="text-primary" id="venmo_number"
+                                                                       onclick="viewInfo(4);">click here</span>
+                                        and share transaction screenshot for approve your order.</p>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="single-contact-form form-group">
+                                        <label>Transaction Number <i class="text-danger">*</i></label>
+                                        <input class="venmo-class" type="text"
+                                               name="transaction_num_cash_app"
+                                               placeholder="">
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="single-contact-form form-group">
+                                        <label>Payment Proof <i class="text-danger">*</i></label>
+                                        <div class="input-group">
+                                            <div class="custom-file">
+                                                <input type="file" class="custom-file-input venmo-class"
+                                                       id="inputGroupFile04" name="payment_proof_venmo"
+                                                       aria-describedby="inputGroupFileAddon04">
+                                                <label class="custom-file-label" for="inputGroupFile04">Choose
+                                                    file</label>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="form-check mt-3">
@@ -631,7 +706,7 @@ date_default_timezone_set("America/New_York");
     </div> <!-- footer copyright -->
 </footer>
 
-<!--====== FOOTER PART ENDS ======-->
+
 
 <!--====== PART START ======-->
 
@@ -686,73 +761,63 @@ date_default_timezone_set("America/New_York");
 <script src="assets/js/main.js"></script>
 
 <script>
-    let x = getCookie('alert');
-
-    function getCookie(name) {
-        var nameEQ = name + "=";
-        var ca = document.cookie.split(';');
-        for (var i = 0; i < ca.length; i++) {
-            var c = ca[i];
-            while (c.charAt(0) == ' ') c = c.substring(1, c.length);
-            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
-        }
-        return null;
-    }
-
-    console.log(x);
-    if (x == 1) {
-        Swal.fire({
-            title: 'Successful',
-            text: 'Request Successful',
-            imageUrl: 'https://plateregistration.com/assets/images/logo-3.png',
-            imageWidth: 140,
-            imageHeight: 81,
-            imageAlt: 'Custom image',
-        })
-        eraseCookie('alert');
-    }
-
-    function eraseCookie(name) {
-        document.cookie = name + '=;';
-    }
-
     function checkoutFunction(value) {
         if (value == "card") {
             document.getElementById("card").style.display = "block";
             document.getElementById("paypal").style.display = "none";
             document.getElementById("zelle").style.display = "none";
             document.getElementById("cash-app").style.display = "none";
+            document.getElementById("venmo").style.display = "none";
             $(".card-class").attr('required', '');
             $(".paypal-class").removeAttr('required');
             $(".zelle-class").removeAttr('required');
             $(".cash-app-class").removeAttr('required');
+            $(".venmo-class").removeAttr('required');
         } else if (value == "paypal") {
             document.getElementById("card").style.display = "none";
             document.getElementById("paypal").style.display = "block";
             document.getElementById("zelle").style.display = "none";
             document.getElementById("cash-app").style.display = "none";
+            document.getElementById("venmo").style.display = "none";
             $(".card-class").removeAttr('required');
             $(".paypal-class").attr('required', '');
             $(".zelle-class").removeAttr('required');
             $(".cash-app-class").removeAttr('required');
+            $(".venmo-class").removeAttr('required');
         } else if (value == "zelle") {
             document.getElementById("card").style.display = "none";
             document.getElementById("paypal").style.display = "none";
             document.getElementById("zelle").style.display = "block";
             document.getElementById("cash-app").style.display = "none";
+            document.getElementById("venmo").style.display = "none";
             $(".card-class").removeAttr('required');
             $(".paypal-class").removeAttr('required');
             $(".zelle-class").attr('required', '');
             $(".cash-app-class").removeAttr('required');
+            $(".venmo-class").removeAttr('required');
         } else if (value == "cash-app") {
             document.getElementById("card").style.display = "none";
             document.getElementById("paypal").style.display = "none";
             document.getElementById("zelle").style.display = "none";
             document.getElementById("cash-app").style.display = "block";
+            document.getElementById("venmo").style.display = "none";
             $(".card-class").removeAttr('required');
             $(".paypal-class").removeAttr('required');
             $(".zelle-class").removeAttr('required');
             $(".cash-app-class").attr('required', '');
+            $(".venmo-class").removeAttr('required');
+
+        } else if (value == "venmo") {
+            document.getElementById("card").style.display = "none";
+            document.getElementById("paypal").style.display = "none";
+            document.getElementById("zelle").style.display = "none";
+            document.getElementById("cash-app").style.display = "none";
+            document.getElementById("venmo").style.display = "block";
+            $(".card-class").removeAttr('required');
+            $(".paypal-class").removeAttr('required');
+            $(".zelle-class").removeAttr('required');
+            $(".cash-app-class").removeAttr('required');
+            $(".venmo-class").attr('required', '');
 
         }
     }
@@ -764,6 +829,26 @@ date_default_timezone_set("America/New_York");
             document.getElementById("zelle_number").innerHTML = "ZELLE, Name: SK Shaheb, Number: +1 (347) 925-2721";
         } else if (value == 3) {
             document.getElementById("cash_app_mail").innerHTML = "Cash app Email: skdrivingschoolny@gmail.com Name: SK Driving School";
+        } else if (value == 4) {
+            document.getElementById("venmo_number").innerHTML = "Number: +1 (646) 406-9584";
+        }
+    }
+
+    function pickupProcedure(value) {
+        if (value == 'Mailed') {
+            document.getElementById("mail").style.display = "contents";
+            document.getElementById("mail_location").style.display = "block";
+            document.getElementById("subtotal").innerHTML = "$ 53.75";
+            document.getElementById("total").innerHTML = "$ 53.75";
+            document.getElementById("price").value = 53.75;
+            $("#location").attr('required', '');
+        } else {
+            document.getElementById("mail").style.display = "none";
+            document.getElementById("mail_location").style.display = "none";
+            document.getElementById("subtotal").innerHTML = "$ 50.00";
+            document.getElementById("total").innerHTML = "$ 50.00";
+            document.getElementById("price").value = 50;
+            $("#location").removeAttr('required');
         }
     }
 </script>
