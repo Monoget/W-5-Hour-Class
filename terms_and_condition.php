@@ -13,7 +13,7 @@ date_default_timezone_set("America/New_York");
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!--====== Title ======-->
-    <title>Other | Pre Licensing Course in NY</title>
+    <title>Terms and Condition | Pre Licensing Course in NY</title>
 
     <!--====== Favicon Icon ======-->
     <link rel="shortcut icon" href="assets/images/fav2.png" type="image/png">
@@ -139,63 +139,71 @@ date_default_timezone_set("America/New_York");
 
 <!--====== HEADER PART ENDS ======-->
 
-<!--====== PRICING PART START ======-->
+<!--====== APPOINTMENT PART START ======-->
 
-<section id="pricing" class="pricing-area gray-bg pt-125 pb-130">
+<section id="appointment" class="contact-area contact-tow pt-125 pb-130">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-6">
-                <div class="section-title section-title-tow text-center">
-                    <h5 class="sub-title">5 HOUR CLASS</h5>
-                    <h2 class="title">Book Other Schedule</h2>
+                <div class="section-title section-title-tow text-center pb-30">
+                    <h5 class="sub-title"></h5>
+                    <h2>TERMS AND CONDITION</h2>
                 </div> <!-- section -title -->
             </div>
         </div> <!-- row -->
-        <div class="pricing-card">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="contact-form contact-form-tow">
-                        <form action="Checkout" method="get" data-toggle="validator">
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <div class="pricing-content mt-25">
-                                        <h4 class="mb-35 text-center">
-                                            <span class="text-success">Online Course</span>
-                                        </h4>
-                                    </div>
-                                </div>
-                                <div class="col-lg-12">
-                                    <div class="single-contact-form form-group">
-                                        <input type="date" id="date" name="date" placeholder="Date"
-                                               data-error="Date is required."
-                                               required="required" onchange="detectWeekend(this.value)">
-                                        <div class="help-block with-errors"></div>
-                                    </div> <!-- single contact form -->
-                                </div>
-                                <div class="col-lg-12">
-                                    <div class="single-contact-form form-group">
-                                        <select name="time" id="time" class="form-control" required="required">
-                                            <option>Choose..</option>
-                                        </select>
-                                        <div class="help-block with-errors"></div>
-                                    </div> <!-- single contact form -->
-                                </div>
-                                <div class="col-lg-12">
-                                    <div class="single-contact-form text-center">
-                                        <button type="submit" class="main-btn main-btn-3" name="submit">SCHEDULE ONLINE
-                                        </button>
-                                    </div> <!-- single contact form -->
-                                </div>
-                            </div> <!-- row -->
-                        </form>
-                    </div>
-                </div>
-            </div> <!-- row -->
-        </div> <!-- row -->
+
+        <div class="contact-form contact-form-tow">
+            <p class="mb-3">
+                Except for contracts executed by schools licensed by the New York State Education Department
+                and subject to the refund provisions of regulations promulgated by that Department, prepayment
+                for lessons and other services shall be subject to refund as follows:
+            </p>
+            <p class="mb-3">
+                If the student, having given prior notice of at least 24 hours, withdraws from or discontinues a
+                prepaid course of instruction or series of lessons before completion thereof, or from any other
+                service for which prepayment has been made, or if the school is unable or unwilling to complete
+                such prepaid course of instruction, or series of lessons, or to provide such other prepaid service!
+                all payments made by the student to the school shall be refunded except:
+            </p>
+
+            <ul class="mb-3">
+                <li class="mb-3">
+                                    <span class="s-txt2">
+                                   (i) An amount equal to the enrollment fee, if any, specified in the contract or expressly receipted
+                                for, not to exceed the sum of $ 10 or 10 percent to the total, whichever is greater, specified cost of
+                                such course of instruction or series of lessons; and
+                                    </span>
+                </li>
+                <li class="mb-3">
+                                    <span class="s-txt2">
+                                    (ii) The school's per-lesson tuition charge for each lesson already taken by the student which
+                                charge shall be determined by dividing the total cost of such course of instruction or series of
+                                lessons by the number of lessons included therein.
+                                    </span>
+                </li>
+            </ul>
+
+            <p class="mb-3">
+                Payment on web site will be deducted 2% on return.</br>
+
+                If the payment is incomplete due to incorrect information at the time of payment, then we are not responsible for that.</br>
+
+                You will be contacted within the next 72 hours after the payment has been completed. You will not be able to refund your payment within those 72 hours.</br>
+
+                If you want a refund in the interim between the services provided to you, you must show reasonable cause.
+            </p>
+
+            <p class="mb-3">
+                If the student has been given prior notice of at least 24 hours withdrawal from or  Discontinual of pre-paid
+                course of instructions or series of lessons before completion or from another service for which payment has been made,
+                or if the school is unable or unwilling to complete such pre-paid course of instruction, or series of lessons,
+                or to provide such other pre-paid service, all payments made by the student to the school shall be refunded.
+            </p>
+        </div> <!-- contact form -->
     </div> <!-- container -->
 </section>
 
-<!--====== PRICING PART ENDS ======-->
+<!--====== CONATCT PART ENDS ======-->
 
 <!--====== FOOTER PART START ======-->
 
@@ -263,7 +271,7 @@ date_default_timezone_set("America/New_York");
     </div> <!-- footer copyright -->
 </footer>
 
-<!--====== FOOTER PART ENDS ======-->
+
 
 <!--====== PART START ======-->
 
@@ -318,89 +326,95 @@ date_default_timezone_set("America/New_York");
 <script src="assets/js/main.js"></script>
 
 <script>
-    let is_weekend = function (date1) {
-        let dt = new Date(date1);
-        if (dt.getDay() == 6) {
-            return "sunday";
+    function checkoutFunction(value) {
+        if (value == "card") {
+            document.getElementById("card").style.display = "block";
+            document.getElementById("paypal").style.display = "none";
+            document.getElementById("zelle").style.display = "none";
+            document.getElementById("cash-app").style.display = "none";
+            document.getElementById("venmo").style.display = "none";
+            $(".card-class").attr('required', '');
+            $(".paypal-class").removeAttr('required');
+            $(".zelle-class").removeAttr('required');
+            $(".cash-app-class").removeAttr('required');
+            $(".venmo-class").removeAttr('required');
+        } else if (value == "paypal") {
+            document.getElementById("card").style.display = "none";
+            document.getElementById("paypal").style.display = "block";
+            document.getElementById("zelle").style.display = "none";
+            document.getElementById("cash-app").style.display = "none";
+            document.getElementById("venmo").style.display = "none";
+            $(".card-class").removeAttr('required');
+            $(".paypal-class").attr('required', '');
+            $(".zelle-class").removeAttr('required');
+            $(".cash-app-class").removeAttr('required');
+            $(".venmo-class").removeAttr('required');
+        } else if (value == "zelle") {
+            document.getElementById("card").style.display = "none";
+            document.getElementById("paypal").style.display = "none";
+            document.getElementById("zelle").style.display = "block";
+            document.getElementById("cash-app").style.display = "none";
+            document.getElementById("venmo").style.display = "none";
+            $(".card-class").removeAttr('required');
+            $(".paypal-class").removeAttr('required');
+            $(".zelle-class").attr('required', '');
+            $(".cash-app-class").removeAttr('required');
+            $(".venmo-class").removeAttr('required');
+        } else if (value == "cash-app") {
+            document.getElementById("card").style.display = "none";
+            document.getElementById("paypal").style.display = "none";
+            document.getElementById("zelle").style.display = "none";
+            document.getElementById("cash-app").style.display = "block";
+            document.getElementById("venmo").style.display = "none";
+            $(".card-class").removeAttr('required');
+            $(".paypal-class").removeAttr('required');
+            $(".zelle-class").removeAttr('required');
+            $(".cash-app-class").attr('required', '');
+            $(".venmo-class").removeAttr('required');
+
+        } else if (value == "venmo") {
+            document.getElementById("card").style.display = "none";
+            document.getElementById("paypal").style.display = "none";
+            document.getElementById("zelle").style.display = "none";
+            document.getElementById("cash-app").style.display = "none";
+            document.getElementById("venmo").style.display = "block";
+            $(".card-class").removeAttr('required');
+            $(".paypal-class").removeAttr('required');
+            $(".zelle-class").removeAttr('required');
+            $(".cash-app-class").removeAttr('required');
+            $(".venmo-class").attr('required', '');
+
         }
-        return "other";
     }
 
+    function viewInfo(value) {
+        if (value == 1) {
+            document.getElementById("paypal_mail").innerHTML = "skdrivingschool.nyc@gmail.com";
+        } else if (value == 2) {
+            document.getElementById("zelle_number").innerHTML = "ZELLE, Name: SK Shaheb, Number: +1 (347) 925-2721";
+        } else if (value == 3) {
+            document.getElementById("cash_app_mail").innerHTML = "Cash app Email: skdrivingschoolny@gmail.com Name: Pre Licensing Course";
+        } else if (value == 4) {
+            document.getElementById("venmo_number").innerHTML = "Number: +1 (646) 406-9584";
+        }
+    }
 
-    function detectWeekend(val) {
-        console.log(is_weekend(val));
-        let time = document.getElementById('time');
-        let weekend = is_weekend(val);
-
-        removeOptions(time);
-
-        time.add(new Option('Choose..'));
-        time.selectedIndex = 1;
-
-        if (weekend === 'other') {
-            time.add(new Option('09:30 AM'));
-            time.add(new Option('03:00 PM'));
+    function pickupProcedure(value) {
+        if (value == 'Mailed') {
+            document.getElementById("mail").style.display = "contents";
+            document.getElementById("mail_location").style.display = "block";
+            document.getElementById("subtotal").innerHTML = "$ 53.75";
+            document.getElementById("total").innerHTML = "$ 53.75";
+            document.getElementById("price").value = 53.75;
+            $("#location").attr('required', '');
         } else {
-            time.add(new Option('11:00 AM'));
+            document.getElementById("mail").style.display = "none";
+            document.getElementById("mail_location").style.display = "none";
+            document.getElementById("subtotal").innerHTML = "$ 50.00";
+            document.getElementById("total").innerHTML = "$ 50.00";
+            document.getElementById("price").value = 50;
+            $("#location").removeAttr('required');
         }
-    }
-
-    function removeOptions(selectElement) {
-        let i, L = selectElement.options.length - 1;
-        for (i = L; i >= 0; i--) {
-            selectElement.remove(i);
-        }
-    }
-
-    let date = new Date();
-    date.setDate(date.getDate() + 8);
-
-    let month=0,day=0;
-    if (date.getMonth() < 10)
-        month = '0' + (date.getMonth()+1);
-    else
-        month =  date.getMonth()+1;
-
-    if (date.getDate() < 10)
-        day = '0' + date.getDate();
-    else
-        day =  date.getDate();
-
-
-    let newDate = date.getFullYear() + "-" + month + "-" + day;
-    document.getElementById("date").min = newDate;
-
-    console.log(newDate);
-
-
-    let x = getCookie('alert');
-
-    function getCookie(name) {
-        var nameEQ = name + "=";
-        var ca = document.cookie.split(';');
-        for (var i = 0; i < ca.length; i++) {
-            var c = ca[i];
-            while (c.charAt(0) == ' ') c = c.substring(1, c.length);
-            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
-        }
-        return null;
-    }
-
-    console.log(x);
-    if (x == 1) {
-        Swal.fire({
-            title: 'Successful',
-            text: 'Request Successful',
-            imageUrl: 'https://plateregistration.com/assets/images/logo-3.png',
-            imageWidth: 140,
-            imageHeight: 81,
-            imageAlt: 'Custom image',
-        })
-        eraseCookie('alert');
-    }
-
-    function eraseCookie(name) {
-        document.cookie = name + '=;';
     }
 </script>
 </body>

@@ -13,7 +13,7 @@ date_default_timezone_set("America/New_York");
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!--====== Title ======-->
-    <title>Pre Licensing Course in NY</title>
+    <title>Checkout | Pre Licensing Course in NY</title>
 
     <!--====== Favicon Icon ======-->
     <link rel="shortcut icon" href="assets/images/fav2.png" type="image/png">
@@ -116,7 +116,7 @@ date_default_timezone_set("America/New_York");
 
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav ml-auto">
-                                <li class="nav-item active"><a class="page-scroll" href="Home#home">Home</a></li>
+                                <li class="nav-item"><a class="page-scroll" href="Home#home">Home</a></li>
                                 <li class="nav-item"><a class="page-scroll" href="Home#about">About</a></li>
                                 <li class="nav-item"><a class="page-scroll" href="Home#service">Services</a></li>
                                 <li class="nav-item"><a class="page-scroll" href="Home#pricing">Pricing</a></li>
@@ -425,7 +425,7 @@ date_default_timezone_set("America/New_York");
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="single-contact-form text-center">
-                                        <button type="submit" class="main-btn main-btn-3" name="submit">Place Order
+                                        <button type="submit" class="main-btn main-btn-3" name="card_submit">Place Order
                                         </button>
                                     </div> <!-- single contact form -->
                                 </div>
@@ -475,7 +475,7 @@ date_default_timezone_set("America/New_York");
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="single-contact-form text-center">
-                                        <button type="submit" class="main-btn main-btn-3" name="submit">Place Order
+                                        <button type="submit" class="main-btn main-btn-3" name="paypal_submit">Place Order
                                         </button>
                                     </div> <!-- single contact form -->
                                 </div>
@@ -525,7 +525,7 @@ date_default_timezone_set("America/New_York");
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="single-contact-form text-center">
-                                        <button type="submit" class="main-btn main-btn-3" name="submit">Place Order
+                                        <button type="submit" class="main-btn main-btn-3" name="zelle_submit">Place Order
                                         </button>
                                     </div> <!-- single contact form -->
                                 </div>
@@ -576,7 +576,7 @@ date_default_timezone_set("America/New_York");
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="single-contact-form text-center">
-                                        <button type="submit" class="main-btn main-btn-3" name="submit">Place Order
+                                        <button type="submit" class="main-btn main-btn-3" name="cash_app_submit">Place Order
                                         </button>
                                     </div> <!-- single contact form -->
                                 </div>
@@ -625,7 +625,7 @@ date_default_timezone_set("America/New_York");
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="single-contact-form text-center">
-                                        <button type="submit" class="main-btn main-btn-3" name="submit">Place Order
+                                        <button type="submit" class="main-btn main-btn-3" name="venmo_submit">Place Order
                                         </button>
                                     </div> <!-- single contact form -->
                                 </div>

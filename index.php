@@ -13,7 +13,7 @@ date_default_timezone_set("America/New_York");
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!--====== Title ======-->
-    <title>Pre Licensing Course in NY</title>
+    <title>Home | Pre Licensing Course in NY</title>
 
     <!--====== Favicon Icon ======-->
     <link rel="shortcut icon" href="assets/images/fav2.png" type="image/png">

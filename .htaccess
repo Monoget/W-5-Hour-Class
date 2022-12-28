@@ -7,3 +7,7 @@ RewriteRule ^Other other.php [NC,L]
 RewriteRule ^Checkout checkout.php [NC,L]
 
 RewriteRule ^Appointment email.php [NC,L]
+
+RewriteRule ^Payment payment.php [NC,L]
+
+RewriteRule ^Terms-and-Condition terms_and_condition.php [NC,L]
