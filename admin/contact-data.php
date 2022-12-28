@@ -9,7 +9,7 @@ $db_handle = new DBController();
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Contact Data Admin | SK Driving School</title>
+    <title>Appointment Data Admin | Pre Licensing Course</title>
     <meta name="description" content="Some description for the page"/>
     <?php require_once('include/css.php'); ?>
 </head>
@@ -40,7 +40,7 @@ $db_handle = new DBController();
                 <div class="collapse navbar-collapse justify-content-between">
                     <div class="header-left">
                         <div class="dashboard_bar">
-                            Contact Data
+                            Appointment Data
                         </div>
                     </div>
 
@@ -61,14 +61,14 @@ $db_handle = new DBController();
             <div class="page-titles">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="javascript:void(0)">Dashboard</a></li>
-                    <li class="breadcrumb-item active"><a href="javascript:void(0)">Contact Data</a></li>
+                    <li class="breadcrumb-item active"><a href="javascript:void(0)">Appointment Data</a></li>
                 </ol>
             </div>
             <div class="row">
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                            <h4 class="card-title">Contact Form Data Collection</h4>
+                            <h4 class="card-title">Appointment Form Data Collection</h4>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">

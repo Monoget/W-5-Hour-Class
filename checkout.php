@@ -828,7 +828,7 @@ date_default_timezone_set("America/New_York");
         } else if (value == 2) {
             document.getElementById("zelle_number").innerHTML = "ZELLE, Name: SK Shaheb, Number: +1 (347) 925-2721";
         } else if (value == 3) {
-            document.getElementById("cash_app_mail").innerHTML = "Cash app Email: skdrivingschoolny@gmail.com Name: SK Driving School";
+            document.getElementById("cash_app_mail").innerHTML = "Cash app Email: skdrivingschoolny@gmail.com Name: Pre Licensing Course";
         } else if (value == 4) {
             document.getElementById("venmo_number").innerHTML = "Number: +1 (646) 406-9584";
         }
