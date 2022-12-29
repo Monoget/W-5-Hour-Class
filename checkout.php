@@ -153,7 +153,7 @@ date_default_timezone_set("America/New_York");
         </div> <!-- row -->
 
         <div class="contact-form contact-form-tow">
-            <form action="Appointment" method="post" data-toggle="validator">
+            <form action="Payment" method="post" data-toggle="validator" enctype="multipart/form-data">
                 <h2>BILLING DETAILS</h2>
                 <div class="row">
                     <div class="col-lg-6">
@@ -202,7 +202,7 @@ date_default_timezone_set("America/New_York");
                     </div>
                     <div class="col-lg-6">
                         <div class="single-contact-form form-group">
-                            <input type="text" name="zip_code" placeholder="Zip Code"
+                            <input type="text" name="zip_code" maxlength="5" minlength="5" placeholder="Zip Code"
                                    data-error="Subject is required." required="required">
                             <div class="help-block with-errors"></div>
                         </div> <!-- single contact form -->
@@ -213,7 +213,7 @@ date_default_timezone_set("America/New_York");
                         <div class="single-contact-form form-group">
                             <label>Attach File (Learner Permit) <i class="text-danger">*</i></label>
                             <div class="custom-file">
-                                <input type="file" class="custom-file-input" id="inputGroupFile01"
+                                <input type="file" class="custom-file-input" name="attach_file_1" id="inputGroupFile01"
                                        aria-describedby="inputGroupFileAddon01" required>
                                 <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
                             </div>
@@ -594,7 +594,7 @@ date_default_timezone_set("America/New_York");
                                     <div class="single-contact-form form-group">
                                         <label>Transaction Number <i class="text-danger">*</i></label>
                                         <input class="venmo-class" type="text"
-                                               name="transaction_num_cash_app"
+                                               name="transaction_num_venmo"
                                                placeholder="">
                                     </div>
                                 </div>

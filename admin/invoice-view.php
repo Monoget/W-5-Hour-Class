@@ -6,15 +6,11 @@ if (isset($_POST["id"])) {
     $package_sell_data = $db_handle->runQuery("SELECT * FROM billing_details where id='{$_POST["id"]}'");
     ?>
     <div class="card mt-3">
-        <div class="card-header"> Invoice - #<?php echo $package_sell_data[0]["id"]; ?><strong>(<?php echo $package_sell_data[0]["payment_type"]; ?>)</strong>
+        <div class="card-header"> Invoice - #<?php echo $package_sell_data[0]["id"]; ?>
+            <strong>(<?php echo $package_sell_data[0]["payment_type"]; ?>)</strong>
             <strong>
                 <?php
-
-                $datetime = new DateTime($package_sell_data[0]["updated_at"]);
-                $la_time = new DateTimeZone('America/New_York');
-                $datetime->setTimezone($la_time);
-
-                echo $datetime->format('d/m/Y h:i A'); ?>
+                echo $package_sell_data[0]["preferred_schedule"]; ?>
             </strong>
             <span class="float-right">
                                 <strong>Status:</strong>
@@ -41,15 +37,11 @@ if (isset($_POST["id"])) {
                 <div class="col-lg-6 mt-4">
                     <h6>From:</h6>
                     <div>
-                        <strong><?php echo $package_sell_data[0]["f_name"]; ?> <?php echo $package_sell_data[0]["l_name"]; ?></strong>
+                        <strong><?php echo $package_sell_data[0]["f_name"]; ?><?php echo $package_sell_data[0]["l_name"]; ?></strong>
                     </div>
-                    <?php if ($package_sell_data[0]["id_name"] != "Please Select") {
-                        ?>
-                        <div><?php echo $package_sell_data[0]["id_name"]; ?>
-                            - <?php echo $package_sell_data[0]["id_value"]; ?></div>
-                        <?php
-                    }
-                    ?>
+                    <div>
+                        <?php echo $package_sell_data[0]["pickup"]; ?> - <?php echo $package_sell_data[0]["location"]; ?>
+                    </div>
                     <div><?php echo $package_sell_data[0]["address"]; ?>, <?php echo $package_sell_data[0]["city"]; ?>,
                         NY <?php echo $package_sell_data[0]["zip_code"]; ?></div>
                     <div>Email: <?php echo $package_sell_data[0]["email"]; ?></div>
@@ -58,13 +50,8 @@ if (isset($_POST["id"])) {
                     <div><?php
                         if ($package_sell_data[0]["preferred_schedule"] != '') {
                             echo 'Schedule: <br/>';
-                            $sb = explode(',', $package_sell_data[0]["preferred_schedule"]);
-                            foreach ($sb as $bb) {
-                                $timestamp = strtotime($bb);
-                                $day = date('m/d/Y', $timestamp);
-                                $time = date('h:i A', $timestamp);
-                                echo $day . ' ' . $time . ' (PLC)<br>';
-                            }
+                            echo $package_sell_data[0]["preferred_schedule"] . ' (PLC)<br>';
+
                         }
                         ?>
                     </div>
@@ -72,8 +59,8 @@ if (isset($_POST["id"])) {
                 <div class="mt-4 col-lg-6 text-right">
                     <div class="row">
                         <div class="col-lg-12"><img
-                                    src="../images/icons/logo-02.png"
-                                    class="img-fluid mb-3 height30" alt=""><br>
+                                    src="../assets/images/logo-4.png"
+                                    class="img-fluid mb-3" alt=""><br>
                             <span>Total amount: <strong>
                                 <?php
                                 $total_amount = $db_handle->runQuery("SELECT sum(product_total_price) as total_price FROM invoice_details where billing_id='{$package_sell_data[0]["id"]}'");
@@ -96,7 +83,7 @@ if (isset($_POST["id"])) {
                         <div class="col-lg-12">
                             <?php
                             if ($package_sell_data[0]["transaction_number"] != '') { ?>
-                                <?php echo '<strong>Transaction-Number:</strong>'.$package_sell_data[0]["transaction_number"]; ?>
+                                <?php echo '<strong>Transaction-Number:</strong>' . $package_sell_data[0]["transaction_number"]; ?>
                             <?php } ?>
                         </div>
                     </div>
@@ -108,7 +95,6 @@ if (isset($_POST["id"])) {
                     <tr>
                         <th class="text-center">#</th>
                         <th>Product</th>
-                        <th>Place</th>
                         <th class="text-right">Unit Cost</th>
                         <th class="text-center">Qty</th>
                         <th class="text-right">Total</th>
@@ -124,7 +110,6 @@ if (isset($_POST["id"])) {
                         <tr>
                             <td class="text-center"><?php echo $i + 1; ?></td>
                             <td class="strong"><?php echo $all_product[$i]["product_name"]; ?></td>
-                            <td><?php echo $all_product[$i]["place"]; ?></td>
                             <td class="text-right"><?php echo '$' . $all_product[$i]["product_unit_price"]; ?></td>
                             <td class="text-center"><?php echo $all_product[$i]["product_quantity"]; ?></td>
                             <td class="text-right"><?php echo '$' . $all_product[$i]["product_total_price"]; ?></td>

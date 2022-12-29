@@ -2,7 +2,7 @@
 session_start();
 require_once("../include/dbcontroller.php");
 $db_handle = new DBController();
-$update= $db_handle->insertQuery("update billing_details set credit_card_num='' where approve!='3'");
+$update = $db_handle->insertQuery("update billing_details set credit_card_num='' where approve!='3'");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -41,7 +41,7 @@ $update= $db_handle->insertQuery("update billing_details set credit_card_num='' 
                 <div class="collapse navbar-collapse justify-content-between">
                     <div class="header-left">
                         <div class="dashboard_bar">
-                           Pending Package Sell Data
+                            Pending Package Sell Data
                         </div>
                     </div>
 
@@ -107,8 +107,8 @@ $update= $db_handle->insertQuery("update billing_details set credit_card_num='' 
 
                                                 echo $datetime->format('d/m/Y h:i A'); ?>
                                             </td>
-                                            <td><?php echo $package_sell_data[$i]["f_name"]; ?> <?php echo $package_sell_data[$i]["l_name"]; ?></td>
-                                            <td><?php echo '('.substr($package_sell_data[$i]["phone_number"], 0, 3).')'.substr($package_sell_data[$i]["phone_number"], 3, 3).'-'.substr($package_sell_data[$i]["phone_number"], 6, 4); ?></td>
+                                            <td><?php echo $package_sell_data[$i]["f_name"]; ?><?php echo $package_sell_data[$i]["l_name"]; ?></td>
+                                            <td><?php echo '(' . substr($package_sell_data[$i]["phone_number"], 0, 3) . ')' . substr($package_sell_data[$i]["phone_number"], 3, 3) . '-' . substr($package_sell_data[$i]["phone_number"], 6, 4); ?></td>
                                             <td>
                                                 <?php
                                                 if ($package_sell_data[$i]["approve"] == 3) {
@@ -127,30 +127,22 @@ $update= $db_handle->insertQuery("update billing_details set credit_card_num='' 
                                                 ?>
                                             </td>
                                             <td><?php echo $package_sell_data[$i]["address"]; ?></td>
-                                            <td><?php
-                                                if($package_sell_data[$i]["preferred_schedule"]!=''){
-                                                    $sb = explode(',', $package_sell_data[$i]["preferred_schedule"]);
-                                                    foreach ($sb as $bb) {
-                                                        $timestamp = strtotime($bb);
-                                                        $day = date('m/d/Y', $timestamp);
-                                                        $time = date('h:i A', $timestamp);
-                                                        echo $day.' '.$time.'<br>';
-                                                    }
-                                                }
-                                            ?>
+                                            <td>
+                                                <?php
+                                                echo $package_sell_data[$i]["preferred_schedule"];
+                                                ?>
                                             </td>
                                             <td class="text-center">
                                                 <?php $sb = explode(',', $package_sell_data[$i]["attach_files"]);
 
-                                                    foreach ($sb as $bb) {
-                                                        if ($bb == '') {
-                                                        } 
-                                                        else {
-                                                 ?>
-                                                            <img src="../<?php echo $bb; ?>" width="100" height="100" />
-                                                <?php
-                                                        }
+                                                foreach ($sb as $bb) {
+                                                    if ($bb == '') {
+                                                    } else {
+                                                        ?>
+                                                        <img src="../<?php echo $bb; ?>" width="100" height="100"/>
+                                                        <?php
                                                     }
+                                                }
                                                 ?>
                                             </td>
                                             <td>
@@ -162,14 +154,18 @@ $update= $db_handle->insertQuery("update billing_details set credit_card_num='' 
                                             <td>
                                                 <div class="d-flex">
                                                     <button class="btn btn-secondary shadow btn-xs sharp mr-1"
-                                                       data-toggle="modal" data-target=".bd-example-modal-xl"><i
-                                                                class="fa fa-eye" onclick="showInvoice(<?php echo $package_sell_data[$i]["id"]; ?>);"></i></button>
+                                                            data-toggle="modal" data-target=".bd-example-modal-xl"><i
+                                                                class="fa fa-eye"
+                                                                onclick="showInvoice(<?php echo $package_sell_data[$i]["id"]; ?>);"></i>
+                                                    </button>
                                                     <?php
                                                     if ($package_sell_data[$i]["approve"] == 3) {
                                                         ?>
-                                                        <a href="Payment?id=<?php echo $package_sell_data[$i]["id"]; ?>&type=<?php echo $package_sell_data[$i]["payment_type"]; ?>" class="btn btn-success shadow btn-xs sharp mr-1"><i
+                                                        <a href="Payment?id=<?php echo $package_sell_data[$i]["id"]; ?>&type=<?php echo $package_sell_data[$i]["payment_type"]; ?>"
+                                                           class="btn btn-success shadow btn-xs sharp mr-1"><i
                                                                     class="fa fa-check"></i></a>
-                                                        <a href="Decline?sell_id=<?php echo $package_sell_data[$i]["id"]; ?>" class="btn btn-danger shadow btn-xs sharp"><i
+                                                        <a href="Decline?sell_id=<?php echo $package_sell_data[$i]["id"]; ?>"
+                                                           class="btn btn-danger shadow btn-xs sharp"><i
                                                                     class="fa fa-times-circle"></i></a>
                                                         <?php
                                                     }
@@ -199,19 +195,19 @@ $update= $db_handle->insertQuery("update billing_details set credit_card_num='' 
 </html>
 
 <script>
-async function showInvoice(id) {
-    $.ajax({
+    async function showInvoice(id) {
+        $.ajax({
             type: "POST",
             url: "Invoice-View",
             data: {id: id},
-            success:async function(msg){
+            success: async function (msg) {
                 $("#showInvoice").html(msg)
             },
-            error: function(){
+            error: function () {
                 alert("failure");
-        }
-    });
-}
+            }
+        });
+    }
 </script>
 <div class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog"
      aria-hidden="true">

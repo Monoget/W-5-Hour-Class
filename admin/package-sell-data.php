@@ -129,16 +129,8 @@ $update= $db_handle->insertQuery("update billing_details set credit_card_num='' 
                                             </td>
                                             <td><?php echo $package_sell_data[$i]["address"]; ?></td>
                                             <td><?php
-                                                if($package_sell_data[$i]["preferred_schedule"]!=''){
-                                                    $sb = explode(',', $package_sell_data[$i]["preferred_schedule"]);
-                                                    foreach ($sb as $bb) {
-                                                        $timestamp = strtotime($bb);
-                                                        $day = date('m/d/Y', $timestamp);
-                                                        $time = date('h:i A', $timestamp);
-                                                        echo $day.' '.$time.' <br>';
-                                                    }
-                                                }
-                                            ?>
+                                                echo $package_sell_data[$i]["preferred_schedule"];
+                                                ?>
                                             </td>
                                             <td class="text-center">
                                                 <?php $sb = explode(',', $package_sell_data[$i]["attach_files"]);
