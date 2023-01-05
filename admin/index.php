@@ -52,7 +52,7 @@ if(isset($_SESSION["name"])){
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Login Admin | Five Hours Online Class</title>
+    <title>Login Admin | Five Hours Class NY</title>
     <meta name="description" content="Some description for the page"/>
     <link rel="icon" type="image/png" href="../assets/images/fav2.png"/>
     <link href="public/css/style.css" rel="stylesheet">

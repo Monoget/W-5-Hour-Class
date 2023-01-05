@@ -2403,7 +2403,7 @@ p.form-message.error {
   background-image: url(../images/footer-dot.jpg);
   background-repeat: repeat; }
   .footer-area.footer-tow {
-    background: #262e45; }
+    background: #070708; }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .footer-widget {
@@ -2538,9 +2538,9 @@ p.form-message.error {
   color: #1976d2; }
   .widget-tow .widget-info .social li a:hover {
     background-color: #1976d2;
-    -webkit-box-shadow: 0px 5px 20px 0px rgba(31, 224, 118, 0.45);
-    -moz-box-shadow: 0px 5px 20px 0px rgba(31, 224, 118, 0.45);
-    box-shadow: 0px 5px 20px 0px rgba(31, 224, 118, 0.45);
+    -webkit-box-shadow: 0px 5px 20px 0px rgba(31, 116, 224, 0.45);
+    -moz-box-shadow: 0px 5px 20px 0px rgba(31, 116, 224, 0.45);
+    box-shadow: 0px 5px 20px 0px rgba(31, 116, 224, 0.45);
     color: #fff; }
 
 /*# sourceMappingURL=style.css.map */

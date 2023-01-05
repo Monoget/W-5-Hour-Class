@@ -4,12 +4,12 @@ class DBController {
     private $user = "root";
     private $password = "";
     private $database = "five_hour_class";
-    private $from_email='noreply@skdrivingschoolny.com';
+    private $from_email='noreply@fivehoursclassny.com';
     private $notification_email='munna4115@gmail.com';
     private $conn;
 
     function __construct() {
-        if($_SERVER['SERVER_NAME']=="skdrivingschoolny.com"||$_SERVER['SERVER_NAME']=="www.skdrivingschoolny.com"){
+        if($_SERVER['SERVER_NAME']=="fivehoursclassny.com"||$_SERVER['SERVER_NAME']=="www.fivehoursclassny.com"){
             $this->host = "localhost";
             $this->user = "upgggnkkroycy";
             $this->password = "3e4bt%D1&2%o";

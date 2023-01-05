@@ -20,12 +20,12 @@ if (isset($_POST['submit'])) {
 
 
     $email_to = $email;
-    $subject = 'Email From Five Hours Online Class';
+    $subject = 'Email From Five Hours Class NY';
     $userName = $name ;
     $l = strtolower($userName);
     $u = ucfirst($l);
 
-    $headers = "From: Five Hours Online Class <" . $db_handle->from_email() . ">\r\n";
+    $headers = "From: Five Hours Class NY <" . $db_handle->from_email() . ">\r\n";
     $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
 
     $messege = "<html>
@@ -42,11 +42,11 @@ if (isset($_POST['submit'])) {
                                 We look forward to speaking with you about packages we need to take to get you into your packages.<br>
                                 Ourteam will contact with you.<br>
                                 If there are any changes to your contact information or availability, please let us know by<br>
-                                Reaching us at <a href='callto:16464000666'>646-400-0666</a> or <a href='mailto:appointment@plateregistration.com'>appointment@plateregistration.com</a>
+                                Reaching us at <a href='callto:16464000666'>646-400-0666</a> or <a href='mailto:appointment@fivehoursclassny.com'>appointment@fivehoursclassny.com</a>
                             </p>
                             
                             <p style='color:black;font-weight:bold'>We look forward to speaking with you!<br>
-                                Five Hours Online Class Team
+                                Five Hours Class NY Team
                              </p> 
                         </div>
                     </body>
@@ -72,7 +72,7 @@ if (isset($_POST['submit'])) {
     $email_to = $db_handle->notify_email();
     $subject = $subject_contact;
 
-    $headers = "From: Five Hours Online Class <" . $db_handle->from_email(). ">\r\n";
+    $headers = "From: Five Hours Class NY <" . $db_handle->from_email(). ">\r\n";
     $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
 
     $messege = "<html>
@@ -81,7 +81,7 @@ if (isset($_POST['submit'])) {
                         
                             <img src='" . $_SERVER['SERVER_NAME'] . "/assets/images/logo-3.png' style='max-width: 300px;display: block;margin-left: auto;margin-right: auto;'>
                                 
-                            <p style='text-align: center;color:green;font-weight:bold'>New Five Hours Online Class Info Data</p>   
+                            <p style='text-align: center;color:green;font-weight:bold'>New Five Hours Class NY Info Data</p>   
                         
                             <p style='color:black'> " . $backend_message . "
                             </p>

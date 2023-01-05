@@ -9,11 +9,11 @@ date_default_timezone_set("America/New_York");
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="description"
-          content="Five Hours Online Class, the place where you will register the car in his name in order to drive it. You bought from the personal seller, the price of the car must be at a reasonable market price.">
+          content="Five Hours Class NY, the place where you will register the car in his name in order to drive it. You bought from the personal seller, the price of the car must be at a reasonable market price.">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!--====== Title ======-->
-    <title>Other | Five Hours Online Class in NY</title>
+    <title>Other | Five Hours Class NY in NY</title>
 
     <!--====== Favicon Icon ======-->
     <link rel="shortcut icon" href="assets/images/fav2.png" type="image/png">
@@ -208,7 +208,7 @@ date_default_timezone_set("America/New_York");
                         <a href="Home">
                             <img src="assets/images/logo-4.png" alt="Logo">
                         </a>
-                        <p class="mt-25">Five Hours Online Class, the place where you will register the car in his name in
+                        <p class="mt-25">Five Hours Class NY, the place where you will register the car in his name in
                             order to drive it.
                             You bought from the personal seller, the price of the car must be at a reasonable market
                             price.
@@ -237,7 +237,7 @@ date_default_timezone_set("America/New_York");
                         </div>
                         <div class="widget-info">
                             <p><span>Location:</span><br/>69-07 Roosevelt Ave 2nd floor, Woodside, New York 11377</p>
-                            <p><span>Email:</span>appointment@plateregistration.com</p>
+                            <p><span>Email:</span>appointment@fivehoursclassny.com</p>
                             <p><span>Phone:</span>+646-400-0666</p>
                             <ul class="social mt-30">
                                 <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
@@ -255,7 +255,7 @@ date_default_timezone_set("America/New_York");
             <div class="row">
                 <div class="col-md-12">
                     <div class="copyright pt-15 text-center text-md-center">
-                        <p>Five Hours Online Class © 2022 All Right Reserved</p>
+                        <p>Five Hours Class NY © 2022 All Right Reserved</p>
                     </div> <!--  copyright -->
                 </div>
             </div> <!-- row -->
