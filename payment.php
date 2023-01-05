@@ -1,5 +1,4 @@
 <?php
-session_start();
 require_once("include/dbcontroller.php");
 $db_handle = new DBController();
 

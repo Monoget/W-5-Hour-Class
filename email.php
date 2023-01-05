@@ -1,21 +1,31 @@
 <?php
-$from_email='appointment@plateregistration.com';
+require_once("include/dbcontroller.php");
+$db_handle = new DBController();
+
 if (isset($_POST['submit'])) {
 
     $name = $_POST['name'];
 
     $email = $_POST['email'];
 
+    $number = $_POST['number'];
+
+    $subject = $_POST['subject'];
+
+    $message = $_POST['message'];
+
     $subject_contact = $_POST['subject'];
+
+    $insert = $db_handle->insertQuery("INSERT INTO `contact`(`name`, `email`, `phone_number`, `subject`, `message`) VALUES ('$name','$email','$number','$subject','$message')");
 
 
     $email_to = $email;
-    $subject = 'Email From Plate Registration';
+    $subject = 'Email From Five Hours Online Class';
     $userName = $name ;
     $l = strtolower($userName);
     $u = ucfirst($l);
 
-    $headers = "From: Plate Registration <" . $from_email . ">\r\n";
+    $headers = "From: Five Hours Online Class <" . $db_handle->from_email() . ">\r\n";
     $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
 
     $messege = "<html>
@@ -36,7 +46,7 @@ if (isset($_POST['submit'])) {
                             </p>
                             
                             <p style='color:black;font-weight:bold'>We look forward to speaking with you!<br>
-                                Plate Registration Team
+                                Five Hours Online Class Team
                              </p> 
                         </div>
                     </body>
@@ -59,10 +69,10 @@ if (isset($_POST['submit'])) {
         $i++;
     }
 
-    $email_to = 'skdrivingschoolny@gmail.com';
+    $email_to = $db_handle->notify_email();
     $subject = $subject_contact;
 
-    $headers = "From: Plate Registration <" . $from_email . ">\r\n";
+    $headers = "From: Five Hours Online Class <" . $db_handle->from_email(). ">\r\n";
     $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
 
     $messege = "<html>
@@ -71,7 +81,7 @@ if (isset($_POST['submit'])) {
                         
                             <img src='" . $_SERVER['SERVER_NAME'] . "/assets/images/logo-3.png' style='max-width: 300px;display: block;margin-left: auto;margin-right: auto;'>
                                 
-                            <p style='text-align: center;color:green;font-weight:bold'>New Plate Registration Info Data</p>   
+                            <p style='text-align: center;color:green;font-weight:bold'>New Five Hours Online Class Info Data</p>   
                         
                             <p style='color:black'> " . $backend_message . "
                             </p>
@@ -85,7 +95,5 @@ if (isset($_POST['submit'])) {
                 document.cookie = 'alert = 1;';
                 window.location.href='Home';
                 </script>";
-    } else {
-
     }
 }

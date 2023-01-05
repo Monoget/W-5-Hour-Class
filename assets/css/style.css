@@ -155,16 +155,16 @@ p {
       border-color: #ff3a46;
       color: #fff; }
   .main-btn.main-btn-3 {
-    background-color: #1fe075;
+    background-color: #1976d2;
     color: #fff;
-    border-color: #1fe075;
-    -webkit-box-shadow: 0px 8px 16px 0px rgba(31, 224, 118, 0.48);
-    -moz-box-shadow: 0px 8px 16px 0px rgba(31, 224, 118, 0.48);
-    box-shadow: 0px 8px 16px 0px rgba(31, 224, 118, 0.48); }
+    border-color: #1976d2;
+    -webkit-box-shadow: 0px 8px 16px 0px rgba(25, 118, 210, 0.48);
+    -moz-box-shadow: 0px 8px 16px 0px rgba(25, 118, 210, 0.48);
+    box-shadow: 0px 8px 16px 0px rgba(25, 118, 210, 0.48); }
     .main-btn.main-btn-3:hover {
       background-color: #fff;
-      border-color: #1fe075;
-      color: #1fe075; }
+      border-color: #1976d2;
+      color: #1976d2; }
 
 /*===== All Section Title Style =====*/
 .section-title .sub-title {
@@ -194,7 +194,7 @@ p {
 .section-title.section-title-2 .sub-title, .section-title.section-title-2 .title {
   color: #fff; }
 .section-title.section-title-tow .sub-title {
-  color: #1fe075; }
+  color: #1976d2; }
 
 /*===== All animation Style =====*/
 .animation1 {
@@ -370,7 +370,7 @@ p {
   overflow: hidden;
   background: #3648b2; }
   .preloader.preloader-tow {
-    background: #1fe075; }
+    background: #1976d2; }
     .preloader.preloader-tow .loader {
       border-top-color: #0a0c19; }
       .preloader.preloader-tow .loader::before {
@@ -983,15 +983,15 @@ p {
   color: #63688e;
   font-weight: 500; }
 .navigation-tow .navbar .navbar-nav .nav-item.active a, .navigation-tow .navbar .navbar-nav .nav-item:hover a {
-  color: #1fe075; }
+  color: #1976d2; }
 .navigation-tow .navbar .navbar-sidebar a {
   font-size: 16px;
   color: #63688e; }
 .navigation-tow.sticky {
   background-color: #fff;
-  -webkit-box-shadow: 0px 0px 10px 0px rgba(31, 224, 118, 0.5);
-  -moz-box-shadow: 0px 0px 10px 0px rgba(31, 224, 118, 0.5);
-  box-shadow: 0px 0px 10px 0px rgba(31, 224, 118, 0.5); }
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(25, 118, 210, 0.5);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(25, 118, 210, 0.5);
+  box-shadow: 0px 0px 10px 0px rgba(25, 118, 210, 0.5); }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .header-content-area-tow {
@@ -1040,7 +1040,7 @@ p {
     padding-bottom: 30px; }
     .header-content-area-tow .header-content-tow .header-title span {
       font-size: 55px;
-      color: #1fe075; }
+      color: #1976d2; }
   @media (max-width: 767px) {
     .header-content-area-tow .header-content-tow .main-btn {
       padding: 0 23px;
@@ -1301,7 +1301,7 @@ p {
         .single-counter .counter-item p {
           font-size: 16px; } }
   .single-counter.counter-tow .counter-item span {
-    color: #1fe075; }
+    color: #1976d2; }
 
 /*===========================
       6.SERVICES css 
@@ -1389,7 +1389,7 @@ p {
       top: 0;
       bottom: auto; }
   .services-content.services-tow .single-services::before {
-    background-color: #1fe075; }
+    background-color: #1976d2; }
 
 .services-image img {
   width: 100%; }
@@ -1494,16 +1494,16 @@ p {
       .work-menu ul li.active span {
         display: block; }
   .work-menu.work-menu-tow ul li {
-    color: #1fe075; }
+    color: #1976d2; }
     .work-menu.work-menu-tow ul li span {
-      background-color: #1fe075; }
+      background-color: #1976d2; }
     .work-menu.work-menu-tow ul li:hover {
-      background-color: #1fe075;
-      border-color: #1fe075;
+      background-color: #1976d2;
+      border-color: #1976d2;
       color: #fff; }
     .work-menu.work-menu-tow ul li.active {
-      background-color: #1fe075;
-      border-color: #1fe075;
+      background-color: #1976d2;
+      border-color: #1976d2;
       color: #fff; }
 
 .single-work {
@@ -1616,15 +1616,15 @@ p {
       -o-transform: translateX(0);
       transform: translateX(0); }
   .single-work.work-tow .work-image .work-overlay {
-    border-color: #1fe075; }
+    border-color: #1976d2; }
     .single-work.work-tow .work-image .work-overlay .work-icon li a {
-      background-color: #1fe075;
+      background-color: #1976d2;
       color: #fff; }
       .single-work.work-tow .work-image .work-overlay .work-icon li a:hover {
         background-color: #fff;
-        color: #1fe075; }
+        color: #1976d2; }
   .single-work.work-tow .work-content .work-title a:hover {
-    color: #1fe075; }
+    color: #1976d2; }
 
 /*===========================
       8.VIDEO css 
@@ -1852,9 +1852,9 @@ p {
             -moz-box-shadow: 0px 8px 16px 0px rgba(255, 58, 71, 0.48);
             box-shadow: 0px 8px 16px 0px rgba(255, 58, 71, 0.48); }
   .single-team.team-tow .team-content .team-name a:hover {
-    color: #1fe075; }
+    color: #1976d2; }
   .single-team.team-tow .team-content ul li a:hover {
-    background-color: #1fe075;
+    background-color: #1976d2;
     -webkit-box-shadow: 0px 8px 16px 0px rgba(31, 224, 118, 0.48);
     -moz-box-shadow: 0px 8px 16px 0px rgba(31, 224, 118, 0.48);
     box-shadow: 0px 8px 16px 0px rgba(31, 224, 118, 0.48); }
@@ -1896,7 +1896,7 @@ p {
         -moz-box-shadow: 0px 8px 16px 0px rgba(255, 58, 71, 0.48);
         box-shadow: 0px 8px 16px 0px rgba(255, 58, 71, 0.48); }
   .team-active.team-active-tow .slick-arrow i:hover {
-    background-color: #1fe075;
+    background-color: #1976d2;
     -webkit-box-shadow: 0px 8px 16px 0px rgba(31, 224, 118, 0.48);
     -moz-box-shadow: 0px 8px 16px 0px rgba(31, 224, 118, 0.48);
     box-shadow: 0px 8px 16px 0px rgba(31, 224, 118, 0.48); }
@@ -1955,7 +1955,7 @@ p {
   .single-pricing.pricing-tow .pricing-price p {
     font-size: 20px;
     font-weight: bold;
-    color: #1fe075; }
+    color: #1976d2; }
 
 /*===========================
       11.TESTIMONIAL css 
@@ -2079,13 +2079,13 @@ p {
     -moz-box-shadow: 0px 15px 24px 0px rgba(190, 190, 190, 0.6);
     box-shadow: 0px 15px 24px 0px rgba(190, 190, 190, 0.6); }
   .testimonial-area.testimonial-area-tow .single-author-left:hover img {
-    background-color: #1fe075; }
+    background-color: #1976d2; }
   .testimonial-area.testimonial-area-tow .single-author-right img {
     -webkit-box-shadow: 0px 15px 24px 0px rgba(190, 190, 190, 0.6);
     -moz-box-shadow: 0px 15px 24px 0px rgba(190, 190, 190, 0.6);
     box-shadow: 0px 15px 24px 0px rgba(190, 190, 190, 0.6); }
   .testimonial-area.testimonial-area-tow .single-author-right:hover img {
-    background-color: #1fe075;
+    background-color: #1976d2;
     -webkit-box-shadow: 0px 15px 24px 0px rgba(31, 224, 118, 0.36);
     -moz-box-shadow: 0px 15px 24px 0px rgba(31, 224, 118, 0.36);
     box-shadow: 0px 15px 24px 0px rgba(31, 224, 118, 0.36); }
@@ -2114,7 +2114,7 @@ p {
       left: auto;
       right: 50%; }
   .testimonial-active.testimonial-active-tow .slick-arrow i:hover {
-    color: #1fe075; }
+    color: #1976d2; }
 
 .single-testimonial {
   /*==== INDEX 2 ====*/ }
@@ -2154,7 +2154,7 @@ p {
     color: #63688e;
     padding-top: 10px; }
   .single-testimonial.testimonial-tow .testimonial-icon i {
-    background-color: #1fe075;
+    background-color: #1976d2;
     -webkit-box-shadow: 0px 15px 24px 0px rgba(31, 224, 118, 0.35);
     -moz-box-shadow: 0px 15px 24px 0px rgba(31, 224, 118, 0.35);
     box-shadow: 0px 15px 24px 0px rgba(31, 224, 118, 0.35); }
@@ -2266,7 +2266,7 @@ p {
     .single-blog.active .blog-meta .meta-title a, .single-blog:hover .blog-meta .meta-title a {
       color: #fff; }
   .single-blog.blog-tow .blog-meta .meta-title .title {
-    color: #1fe075; }
+    color: #1976d2; }
   .single-blog.blog-tow.active::before, .single-blog.blog-tow:hover::before {
     background-color: rgba(31, 224, 118, 0.85); }
   .single-blog.blog-tow.active .blog-meta .meta-title .title, .single-blog.blog-tow:hover .blog-meta .meta-title .title {
@@ -2514,7 +2514,7 @@ p.form-message.error {
     color: #fff;
     background-color: #3648b2; }
   .back-to-top.back-tow {
-    background-color: #1fe075; }
+    background-color: #1976d2; }
     .back-to-top.back-tow:hover {
       background-color: #3648b2; }
 
@@ -2526,18 +2526,18 @@ p.form-message.error {
 .widget-tow .widget-link ul li a {
   color: #fff; }
   .widget-tow .widget-link ul li a i {
-    color: #1fe075; }
+    color: #1976d2; }
   .widget-tow .widget-link ul li a:hover {
-    color: #1fe075; }
+    color: #1976d2; }
 .widget-tow .widget-info p {
   color: #fff; }
   .widget-tow .widget-info p span {
-    color: #1fe075; }
+    color: #1976d2; }
 .widget-tow .widget-info .social li a {
-  border-color: #1fe075;
-  color: #1fe075; }
+  border-color: #1976d2;
+  color: #1976d2; }
   .widget-tow .widget-info .social li a:hover {
-    background-color: #1fe075;
+    background-color: #1976d2;
     -webkit-box-shadow: 0px 5px 20px 0px rgba(31, 224, 118, 0.45);
     -moz-box-shadow: 0px 5px 20px 0px rgba(31, 224, 118, 0.45);
     box-shadow: 0px 5px 20px 0px rgba(31, 224, 118, 0.45);

@@ -9,11 +9,11 @@ date_default_timezone_set("America/New_York");
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="description"
-          content="Pre Licensing Course, the place where you will register the car in his name in order to drive it. You bought from the personal seller, the price of the car must be at a reasonable market price.">
+          content="Five Hours Online Class, the place where you will register the car in his name in order to drive it. You bought from the personal seller, the price of the car must be at a reasonable market price.">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!--====== Title ======-->
-    <title>Checkout | Pre Licensing Course in NY</title>
+    <title>Checkout | Five Hours Online Class in NY</title>
 
     <!--====== Favicon Icon ======-->
     <link rel="shortcut icon" href="assets/images/fav2.png" type="image/png">
@@ -651,7 +651,7 @@ date_default_timezone_set("America/New_York");
                         <a href="Home">
                             <img src="assets/images/logo-4.png" alt="Logo">
                         </a>
-                        <p class="mt-25">Pre Licensing Course, the place where you will register the car in his name in
+                        <p class="mt-25">Five Hours Online Class, the place where you will register the car in his name in
                             order to drive it.
                             You bought from the personal seller, the price of the car must be at a reasonable market
                             price.
@@ -698,7 +698,7 @@ date_default_timezone_set("America/New_York");
             <div class="row">
                 <div class="col-md-12">
                     <div class="copyright pt-15 text-center text-md-center">
-                        <p>Pre Licensing Course © 2022 All Right Reserved</p>
+                        <p>Five Hours Online Class © 2022 All Right Reserved</p>
                     </div> <!--  copyright -->
                 </div>
             </div> <!-- row -->
@@ -828,7 +828,7 @@ date_default_timezone_set("America/New_York");
         } else if (value == 2) {
             document.getElementById("zelle_number").innerHTML = "ZELLE, Name: SK Shaheb, Number: +1 (347) 925-2721";
         } else if (value == 3) {
-            document.getElementById("cash_app_mail").innerHTML = "Cash app Email: skdrivingschoolny@gmail.com Name: Pre Licensing Course";
+            document.getElementById("cash_app_mail").innerHTML = "Cash app Email: skdrivingschoolny@gmail.com Name: Five Hours Online Class";
         } else if (value == 4) {
             document.getElementById("venmo_number").innerHTML = "Number: +1 (646) 406-9584";
         }

@@ -9,7 +9,7 @@ $db_handle = new DBController();
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Appointment Data Admin | Pre Licensing Course</title>
+    <title>Appointment Data Admin | Five Hours Online Class</title>
     <meta name="description" content="Some description for the page"/>
     <?php require_once('include/css.php'); ?>
 </head>
@@ -79,6 +79,7 @@ $db_handle = new DBController();
                                         <th>ID No</th>
                                         <th>Name</th>
                                         <th>Email</th>
+                                        <th>Number</th>
                                         <th>Subject</th>
                                         <th>Message</th>
                                         <th>Status</th>
@@ -98,6 +99,7 @@ $db_handle = new DBController();
                                             <td>#<?php echo $contact_data[$i]["id"]; ?></td>
                                             <td><?php echo $contact_data[$i]["name"]; ?></td>
                                             <td><?php echo $contact_data[$i]["email"]; ?></td>
+                                            <td><?php echo $contact_data[$i]["number"]; ?></td>
                                             <td><?php echo $contact_data[$i]["subject"]; ?></td>
                                             <td><?php echo $contact_data[$i]["message"]; ?></td>
                                             <td>

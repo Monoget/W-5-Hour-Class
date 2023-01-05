@@ -9,11 +9,11 @@ date_default_timezone_set("America/New_York");
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="description"
-          content="Pre Licensing Course, the place where you will register the car in his name in order to drive it. You bought from the personal seller, the price of the car must be at a reasonable market price.">
+          content="Five Hours Online Class, the place where you will register the car in his name in order to drive it. You bought from the personal seller, the price of the car must be at a reasonable market price.">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!--====== Title ======-->
-    <title>Home | Pre Licensing Course in NY</title>
+    <title>Home | Five Hours Online Class in NY</title>
 
     <!--====== Favicon Icon ======-->
     <link rel="shortcut icon" href="assets/images/fav2.png" type="image/png">
@@ -242,7 +242,7 @@ date_default_timezone_set("America/New_York");
             <div class="col-lg-9">
                 <div class="section-title section-title-tow text-center pb-10">
                     <h5 class="sub-title">Our Amazing Services</h5>
-                    <h2 class="title">We’r Provided Pre Licensing Course and Renewal Services!</h2>
+                    <h2 class="title">We’r Provided Five Hours Online Class!</h2>
                 </div> <!-- section -title -->
             </div>
         </div> <!-- row -->
@@ -253,30 +253,32 @@ date_default_timezone_set("America/New_York");
                     <a class="active" id="v-pills-application-tab" data-toggle="pill" href="#v-pills-application"
                        role="tab" aria-controls="v-pills-application" aria-selected="true">
                         <div class="single-services">
-                            <h4 class="services-title">New plate and Registration</h4>
-                            <p>When a person buys a new car, the buyer needs to register the car in his name in order to
-                                drive it.
-                                Failure to do so results in suspension of driving privileges and tickets.</p>
+                            <h4 class="services-title">Enrollment</h4>
+                            <p>
+                                To take the 5 hour class, you have to Register with documents required,
+                                You must have a valid photo learner’s permit to register.
+                            </p>
                         </div> <!-- single services -->
                     </a>
 
                     <a id="v-pills-web-tab" data-toggle="pill" href="#v-pills-web" role="tab"
                        aria-controls="v-pills-web" aria-selected="false">
                         <div class="single-services">
-                            <h4 class="services-title">Duplicate Title</h4>
-                            <p>Title of the car is needed in order to sell the car, if lost then it can be ordered from
-                                dmv.</p>
+                            <h4 class="services-title">Get the link</h4>
+                            <p>
+                                On the day of Five Hour class you will get an email from Five Hour Onilne Class, New
+                                York. Which will contain a Zoom link to enter 5 hour class.To access Zoom, you must have
+                                internet access.
+                            </p>
                         </div> <!-- single services -->
                     </a>
 
                     <a id="v-pills-uiux-tab" data-toggle="pill" href="#v-pills-uiux" role="tab"
                        aria-controls="v-pills-uiux" aria-selected="false">
                         <div class="single-services">
-                            <h4 class="services-title">Surrender Plate</h4>
-                            <p>After a car has been sold, the plates need to be surrendered to DMV or any Express
-                                service in order to get the receipt.
-                                This receipt is used to cancel the Insurance of the car.<br/>
-                                And the DMV also sends a check that includes the return registration money from dmv.
+                            <h4 class="services-title">Complete the Class</h4>
+                            <p>
+                                Student must complete full class to get the certification of completion of Pre- Licensing Course.
                             </p>
                         </div> <!-- single services -->
                     </a>
@@ -284,8 +286,10 @@ date_default_timezone_set("America/New_York");
                     <a id="v-pills-graphic-tab" data-toggle="pill" href="#v-pills-graphic" role="tab"
                        aria-controls="v-pills-graphic" aria-selected="false">
                         <div class="single-services">
-                            <h4 class="services-title">Registration Renewal</h4>
-                            <p> Car registration is valid for 2 years, and every 2 years it needs to be renewed.</p>
+                            <h4 class="services-title">Receive your 5-hr Certificate</h4>
+                            <p>
+                                The Certificate of Completion will be mailed to the address on the Learner's Permit.
+                            </p>
                         </div> <!-- single services -->
                     </a>
                 </div> <!-- nav -->
@@ -358,8 +362,7 @@ date_default_timezone_set("America/New_York");
                                 if ($day_name != 'Sunday') {
                                     if ($hour > 9 && $i == 0) {
 
-                                    }
-                                    else {
+                                    } else {
                                         ?>
                                         <div class="col-lg-4 mx-auto">
                                             <div class="single-pricing pricing-tow pricing-body text-center mt-30">
@@ -377,7 +380,9 @@ date_default_timezone_set("America/New_York");
                                                         <span class="text-danger">09:30 am - 2:30 pm</span><br/>
                                                         <span class="text-success">Online Course</span>
                                                     </p>
-                                                    <a class="main-btn main-btn-3" href="Checkout?date=<?php echo $day; ?>&time=09:30 AM">SCHEDULE ONLINE</a>
+                                                    <a class="main-btn main-btn-3"
+                                                       href="Checkout?date=<?php echo $day; ?>&time=09:30 AM">SCHEDULE
+                                                        ONLINE</a>
                                                 </div>
                                             </div> <!-- single price -->
                                         </div>
@@ -386,8 +391,7 @@ date_default_timezone_set("America/New_York");
 
                                     if ($hour > 17 && $i == 0) {
 
-                                    }
-                                    else {
+                                    } else {
                                         ?>
 
                                         <div class="col-lg-4 mx-auto">
@@ -406,7 +410,9 @@ date_default_timezone_set("America/New_York");
                                                         <span class="text-danger">3:00 pm - 8:00 pm</span><br/>
                                                         <span class="text-success">Online Course</span>
                                                     </p>
-                                                    <a class="main-btn main-btn-3" href="Checkout?date=<?php echo $day; ?>&time=03:00 PM">SCHEDULE ONLINE</a>
+                                                    <a class="main-btn main-btn-3"
+                                                       href="Checkout?date=<?php echo $day; ?>&time=03:00 PM">SCHEDULE
+                                                        ONLINE</a>
                                                 </div>
                                             </div> <!-- single price -->
                                         </div>
@@ -415,8 +421,7 @@ date_default_timezone_set("America/New_York");
                                 } else {
                                     if ($hour > 10 && $i == 0) {
 
-                                    }
-                                    else {
+                                    } else {
                                         ?>
                                         <div class="col-lg-4 mx-auto">
                                             <div class="single-pricing pricing-tow pricing-body text-center mt-30">
@@ -434,7 +439,9 @@ date_default_timezone_set("America/New_York");
                                                         <span class="text-danger">11:00 am - 4:00 pm</span><br/>
                                                         <span class="text-success">Online Course</span>
                                                     </p>
-                                                    <a class="main-btn main-btn-3" href="Checkout?date=<?php echo $day; ?>&time=11:00 AM">SCHEDULE ONLINE</a>
+                                                    <a class="main-btn main-btn-3"
+                                                       href="Checkout?date=<?php echo $day; ?>&time=11:00 AM">SCHEDULE
+                                                        ONLINE</a>
                                                 </div>
                                             </div> <!-- single price -->
                                         </div>
@@ -477,7 +484,7 @@ date_default_timezone_set("America/New_York");
                         <div class="card-header" id="headingOne">
                             <h5 class="mb-0">
                                 <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"
-                                        aria-expanded="true" aria-controls="collapseOne" style="color: #1fe075">
+                                        aria-expanded="true" aria-controls="collapseOne" style="color: #1976d2">
                                     Who Needs the New York 5-Hour Online Pre-Licensing Course?
                                 </button>
                             </h5>
@@ -505,7 +512,7 @@ date_default_timezone_set("America/New_York");
                         <div class="card-header" id="headingTwo">
                             <h5 class="mb-0">
                                 <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
-                                        aria-expanded="false" aria-controls="collapseTwo" style="color: #1fe075">
+                                        aria-expanded="false" aria-controls="collapseTwo" style="color: #1976d2">
                                     Course Details
                                 </button>
                             </h5>
@@ -531,7 +538,7 @@ date_default_timezone_set("America/New_York");
                             <h5 class="mb-0">
                                 <button class="btn btn-link collapsed" data-toggle="collapse"
                                         data-target="#collapseThree" aria-expanded="false"
-                                        aria-controls="collapseThree" style="color: #1fe075">
+                                        aria-controls="collapseThree" style="color: #1976d2">
                                     Learning Objectives
                                 </button>
                             </h5>
@@ -581,7 +588,7 @@ date_default_timezone_set("America/New_York");
                             <h5 class="mb-0">
                                 <button class="btn btn-link collapsed" data-toggle="collapse"
                                         data-target="#collapseFour" aria-expanded="false"
-                                        aria-controls="collapseFour" style="color: #1fe075">
+                                        aria-controls="collapseFour" style="color: #1976d2">
                                     Course Outline
                                 </button>
                             </h5>
@@ -647,24 +654,17 @@ date_default_timezone_set("America/New_York");
         <div class="contact-form contact-form-tow">
             <form action="Appointment" method="post" data-toggle="validator">
                 <div class="row">
-                    <div class="col-lg-4">
+                    <div class="col-lg-6">
                         <div class="single-contact-form form-group">
                             <input type="text" name="name" placeholder="Enter Your Name" data-error="Name is required."
                                    required="required">
                             <div class="help-block with-errors"></div>
                         </div> <!-- single contact form -->
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-6">
                         <div class="single-contact-form form-group">
                             <input type="email" name="email" placeholder="Enter Your Email"
                                    data-error="Valid email is required." required="required">
-                            <div class="help-block with-errors"></div>
-                        </div> <!-- single contact form -->
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="single-contact-form form-group">
-                            <input type="datetime-local" name="available_time" placeholder="Available Time"
-                                   data-error="Available time is required." required="required">
                             <div class="help-block with-errors"></div>
                         </div> <!-- single contact form -->
                     </div>
@@ -714,7 +714,7 @@ date_default_timezone_set("America/New_York");
                         <a href="Home">
                             <img src="assets/images/logo-4.png" alt="Logo">
                         </a>
-                        <p class="mt-25">Pre Licensing Course, the place where you will register the car in his name in
+                        <p class="mt-25">Five Hours Online Class, the place where you will register the car in his name in
                             order to drive it.
                             You bought from the personal seller, the price of the car must be at a reasonable market
                             price.
@@ -761,7 +761,7 @@ date_default_timezone_set("America/New_York");
             <div class="row">
                 <div class="col-md-12">
                     <div class="copyright pt-15 text-center text-md-center">
-                        <p>Pre Licensing Course © 2022 All Right Reserved</p>
+                        <p>Five Hours Online Class © 2022 All Right Reserved</p>
                     </div> <!--  copyright -->
                 </div>
             </div> <!-- row -->

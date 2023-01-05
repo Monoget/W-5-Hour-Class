@@ -10,7 +10,7 @@ $update= $db_handle->insertQuery("update billing_details set credit_card_num='' 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Package Sell Data Admin | Pre Licensing Course</title>
+    <title>Package Sell Data Admin | Five Hours Online Class</title>
     <meta name="description" content="Some description for the page"/>
     <?php require_once('include/css.php'); ?>
 </head>
