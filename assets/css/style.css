@@ -2543,4 +2543,13 @@ p.form-message.error {
     box-shadow: 0px 5px 20px 0px rgba(31, 116, 224, 0.45);
     color: #fff; }
 
+.navbar-brand img{
+  width: 220px;
+}
+
+@media only screen and (max-width: 600px) {
+  .navbar-brand img{
+    width: 160px;
+  }
+}
 /*# sourceMappingURL=style.css.map */

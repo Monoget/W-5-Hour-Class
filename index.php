@@ -299,26 +299,26 @@ date_default_timezone_set("America/New_York");
                     <div class="tab-pane fade show active" id="v-pills-application" role="tabpanel"
                          aria-labelledby="v-pills-application-tab">
                         <div class="services-image animation1 mt-50">
-                            <img src="assets/images/services.png" alt="Services">
+                            <img src="assets/images/service-1.jpg" alt="Services">
                         </div> <!-- services image -->
                     </div>
 
                     <div class="tab-pane fade" id="v-pills-web" role="tabpanel" aria-labelledby="v-pills-web-tab">
                         <div class="services-image animation1 mt-50">
-                            <img src="assets/images/services.png" alt="Services">
+                            <img src="assets/images/service-2.jpg" alt="Services">
                         </div> <!-- services image -->
                     </div>
 
                     <div class="tab-pane fade" id="v-pills-uiux" role="tabpanel" aria-labelledby="v-pills-uiux-tab">
                         <div class="services-image animation1 mt-50">
-                            <img src="assets/images/services.png" alt="Services">
+                            <img src="assets/images/services-3.jpg" alt="Services">
                         </div> <!-- services image -->
                     </div>
 
                     <div class="tab-pane fade" id="v-pills-graphic" role="tabpanel"
                          aria-labelledby="v-pills-graphic-tab">
                         <div class="services-image animation1 mt-50">
-                            <img src="assets/images/services.png" alt="Services">
+                            <img src="assets/images/services-4.jpg" alt="Services">
                         </div> <!-- services image -->
                     </div>
                 </div> <!-- tab content -->
